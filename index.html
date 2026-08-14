@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Moataz — Freelance UI/UX Designer and Frontend Developer. Fast, clean and accessible digital products.">
+<meta name="description" content="Moataz — Freelance and Frontend Developer. Fast, clean and accessible digital products.">
 <meta name="keywords" content="freelance developer, UI designer, portfolio, Tailwind CSS, Node.js">
 <meta name="author" content="Moataz">
 <meta property="og:title" content="Moataz — Freelance UI/UX Designer">
@@ -25,7 +25,7 @@ tailwind.config = {
   theme: {
     extend: {
       fontFamily: { display: ['PT Sans','sans-serif'], body: ['DM Sans','sans-serif'] },
-      colors: { accent: '#FF6B2B', 'accent-light': '#FF8F5C' }
+      colors: { accent: '#1D6FB8', 'accent-light': '#4A9FD8' }
     }
   }
 }
@@ -44,7 +44,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 /* scrollbar */
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:#FF6B2B;border-radius:99px}
+::-webkit-scrollbar-thumb{background:#1D6FB8;border-radius:99px}
 
 /* reveal on scroll */
 .reveal{opacity:0;transform:translateY(26px);transition:opacity .6s cubic-bezier(.4,0,.2,1),transform .6s cubic-bezier(.4,0,.2,1)}
@@ -76,6 +76,10 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 /* skill icon tile */
 .sicon{transition:transform .28s cubic-bezier(.4,0,.2,1),background-color .18s,color .18s}
 .card-h:hover .sicon{transform:scale(1.08) rotate(-4deg)}
+
+/* typewriter cursor */
+.tw-cursor{display:inline-block;width:2px;background:currentColor;animation:tw-blink 1s step-end infinite;margin-left:1px}
+@keyframes tw-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
 
 [x-cloak]{display:none!important}
 </style>
@@ -150,11 +154,14 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
 
       <div>
         <p class="reveal text-sm font-medium text-accent tracking-widest uppercase mb-4">Available for work</p>
-        <h1 class="reveal d1 font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-zinc-900 dark:text-white mb-6">
+        <h1 class="reveal d1 font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight text-zinc-900 dark:text-white mb-4">
           Hi, I'm <span class="text-accent">Moataz</span>
         </h1>
+        <p class="reveal d1 font-display font-medium text-xl md:text-2xl text-zinc-700 dark:text-zinc-300 mb-6 min-h-[1.6em]" aria-live="polite">
+          <span id="tw-role"></span><span class="tw-cursor" aria-hidden="true">&nbsp;</span>
+        </p>
         <p class="reveal d2 text-lg md:text-xl text-zinc-500 dark:text-zinc-400 font-light leading-relaxed max-w-md mb-10">
-          Freelance <strong class="font-medium text-zinc-700 dark:text-zinc-300">UI/UX Designer &amp; Frontend Developer</strong>. I design and build digital products that people love to use — fast, clean, and accessible.
+          Freelance <strong class="font-medium text-zinc-700 dark:text-zinc-300">Frontend Developer</strong>. I design and build digital products that people love to use — fast, clean, and accessible.
         </p>
         <div class="reveal d3 flex flex-wrap gap-4">
           <a href="#work" class="shimmer inline-flex items-center gap-2 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 font-medium px-7 py-3.5 rounded-full hover:bg-zinc-700 dark:hover:bg-zinc-200 transition-colors text-sm">
@@ -173,7 +180,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
       <div class="reveal d2 flex justify-center md:justify-end">
         <div class="relative w-72 h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
           <div class="pf w-full h-full rounded-3xl">
-            <img src="profi.jpg" alt="Moataz — Freelance UI/UX Designer" loading="eager">
+            <img src="profi.jpg" alt="Moataz — Web Developer" loading="eager">
           </div>
           <div class="absolute -bottom-4 -left-4 bg-accent text-white font-display font-bold text-sm px-4 py-2.5 rounded-2xl shadow-lg">Open to projects</div>
         </div>
@@ -193,7 +200,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
     <div class="grid md:grid-cols-3 gap-6">
 
       <article class="reveal d1 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent">
-        <div class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-800 rounded-xl mb-6 group-hover:bg-accent/10 transition-colors">
+        <div class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-zinc-800 rounded-xl mb-6 group-hover:bg-accent/10 transition-colors">
           <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2h-2"/></svg>
         </div>
         <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3">UI/UX Design</h3>
@@ -209,7 +216,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
       </article>
 
       <article class="reveal d3 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-zinc-100 dark:border-zinc-800 hover:border-accent">
-        <div class="w-12 h-12 flex items-center justify-center bg-orange-50 dark:bg-zinc-800 rounded-xl mb-6 group-hover:bg-accent/10 transition-colors">
+        <div class="w-12 h-12 flex items-center justify-center bg-blue-50 dark:bg-zinc-800 rounded-xl mb-6 group-hover:bg-accent/10 transition-colors">
           <svg class="w-6 h-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/></svg>
         </div>
         <h3 class="font-display font-bold text-xl text-zinc-900 dark:text-white mb-3">Landing Pages</h3>
@@ -265,7 +272,7 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
               <div class="flex flex-wrap gap-2 mb-3">
                 <template x-for="tag in p.tags" :key="tag">
                   <span class="text-xs px-2.5 py-1 rounded-full"
-                    :class="tag === p.categoryLabel ? 'bg-orange-50 dark:bg-zinc-800 text-accent border border-orange-200 dark:border-zinc-700' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400'"
+                    :class="tag === p.categoryLabel ? 'bg-blue-50 dark:bg-zinc-800 text-accent border border-blue-200 dark:border-zinc-700' : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400'"
                     x-text="tag"></span>
                 </template>
               </div>
@@ -335,14 +342,14 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
         <div class="reveal d4">
           <p class="text-xs font-medium text-zinc-500 dark:text-zinc-400 uppercase tracking-widest mb-3">Stack &amp; tools</p>
           <div class="flex flex-wrap gap-2" role="list" aria-label="Skills">
+            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">HTML</span>
+            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">CSS</span>
+            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">JavaScript</span>
             <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Bootstrap </span>
+            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">React.js</span>
             <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Node.js</span>
             <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Figma</span>
-            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">HTML / CSS</span>
-            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">JavaScript</span>
-            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Symfony</span>
-            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Framer</span>
-            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Webflow</span>
+            <span role="listitem" class="stag text-sm bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 px-3.5 py-1.5 rounded-full hover:border-accent">Python</span>
           </div>
         </div>
       </div>
@@ -390,42 +397,42 @@ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/sv
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
 
       <article class="reveal d1 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800 hover:border-accent flex flex-col items-center text-center">
-        <div class="sicon w-14 h-14 flex items-center justify-center bg-orange-50 dark:bg-zinc-800 rounded-2xl mb-4 group-hover:bg-accent/10">
+        <div class="sicon w-14 h-14 flex items-center justify-center bg-blue-50 dark:bg-zinc-800 rounded-2xl mb-4 group-hover:bg-accent/10">
           <i class="fa-brands fa-html5 text-2xl text-accent" aria-hidden="true"></i>
         </div>
         <h3 class="font-display font-bold text-sm text-zinc-900 dark:text-white">HTML5</h3>
       </article>
 
       <article class="reveal d1 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800 hover:border-accent flex flex-col items-center text-center">
-        <div class="sicon w-14 h-14 flex items-center justify-center bg-orange-50 dark:bg-zinc-800 rounded-2xl mb-4 group-hover:bg-accent/10">
+        <div class="sicon w-14 h-14 flex items-center justify-center bg-blue-50 dark:bg-zinc-800 rounded-2xl mb-4 group-hover:bg-accent/10">
           <i class="fa-brands fa-css3-alt text-2xl text-accent" aria-hidden="true"></i>
         </div>
         <h3 class="font-display font-bold text-sm text-zinc-900 dark:text-white">CSS3</h3>
       </article>
 
       <article class="reveal d2 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800 hover:border-accent flex flex-col items-center text-center">
-        <div class="sicon w-14 h-14 flex items-center justify-center bg-orange-50 dark:bg-zinc-800 rounded-2xl mb-4 group-hover:bg-accent/10">
+        <div class="sicon w-14 h-14 flex items-center justify-center bg-blue-50 dark:bg-zinc-800 rounded-2xl mb-4 group-hover:bg-accent/10">
           <i class="fa-brands fa-js text-2xl text-accent" aria-hidden="true"></i>
         </div>
         <h3 class="font-display font-bold text-sm text-zinc-900 dark:text-white">JavaScript</h3>
       </article>
 
       <article class="reveal d2 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800 hover:border-accent flex flex-col items-center text-center">
-        <div class="sicon w-14 h-14 flex items-center justify-center bg-orange-50 dark:bg-zinc-800 rounded-2xl mb-4 group-hover:bg-accent/10">
+        <div class="sicon w-14 h-14 flex items-center justify-center bg-blue-50 dark:bg-zinc-800 rounded-2xl mb-4 group-hover:bg-accent/10">
           <i class="fa-brands fa-bootstrap text-2xl text-accent" aria-hidden="true"></i>
         </div>
         <h3 class="font-display font-bold text-sm text-zinc-900 dark:text-white">Bootstrap</h3>
       </article>
 
       <article class="reveal d3 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800 hover:border-accent flex flex-col items-center text-center">
-        <div class="sicon w-14 h-14 flex items-center justify-center bg-orange-50 dark:bg-zinc-800 rounded-2xl mb-4 group-hover:bg-accent/10">
+        <div class="sicon w-14 h-14 flex items-center justify-center bg-blue-50 dark:bg-zinc-800 rounded-2xl mb-4 group-hover:bg-accent/10">
           <i class="fa-brands fa-react text-2xl text-accent" aria-hidden="true"></i>
         </div>
         <h3 class="font-display font-bold text-sm text-zinc-900 dark:text-white">React.js</h3>
       </article>
 
       <article class="reveal d3 card-h group bg-white dark:bg-zinc-900 rounded-2xl p-6 border border-zinc-100 dark:border-zinc-800 hover:border-accent flex flex-col items-center text-center">
-        <div class="sicon w-14 h-14 flex items-center justify-center bg-orange-50 dark:bg-zinc-800 rounded-2xl mb-4 group-hover:bg-accent/10">
+        <div class="sicon w-14 h-14 flex items-center justify-center bg-blue-50 dark:bg-zinc-800 rounded-2xl mb-4 group-hover:bg-accent/10">
           <i class="fa-brands fa-python text-2xl text-accent" aria-hidden="true"></i>
         </div>
         <h3 class="font-display font-bold text-sm text-zinc-900 dark:text-white">Python</h3>
@@ -614,6 +621,43 @@ function app() {
 
       // footer year
       document.getElementById('yr').textContent = new Date().getFullYear();
+
+      // hero typewriter: cycles between roles
+      this.startTypewriter();
+    },
+
+    startTypewriter() {
+      const roles = ['Frontend Developer', 'Computer Science Student'];
+      const el = document.getElementById('tw-role');
+      let roleIndex = 0;
+      let charIndex = 0;
+      let deleting = false;
+
+      const tick = () => {
+        const current = roles[roleIndex];
+
+        if (!deleting) {
+          charIndex++;
+          el.textContent = current.slice(0, charIndex);
+          if (charIndex === current.length) {
+            deleting = true;
+            setTimeout(tick, 1600);
+            return;
+          }
+        } else {
+          charIndex--;
+          el.textContent = current.slice(0, charIndex);
+          if (charIndex === 0) {
+            deleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            setTimeout(tick, 400);
+            return;
+          }
+        }
+        setTimeout(tick, deleting ? 45 : 85);
+      };
+
+      tick();
     },
 
     updateSection() {
